@@ -1,0 +1,52 @@
+Recommandations sur l'utilisation des fichiers pour l'APP2.
+A lire absolument !
+
+****************************************************************
+**  Langage C                                                 **
+****************************************************************
+
+Compilation
+-----------
+Pour compiler :
+> make
+
+ou
+
+> clang -Wall -Wextra main.c -o main curiosity.c interprete.c listes.c
+(Nous vous conseillons d'utiliser le compilateur clang plutôt que gcc.)
+
+
+Lancer un test
+--------------
+
+Test complet
+> ./main tests/<nom de test>.test
+
+Test en mode "pas à pas" :
+> ./main -d tests/<nom de test>.test
+
+Test de performance :
+  => recompiler avec les options de performance
+     (modifiez les CFLAGS comme indique dans le Makefile)
+
+> ./main -silent tests/perfs/<nom de test de performance>.test
+
+
+Lancer une suite de tests
+-------------------------
+
+Tests fonctionnels :
+> ./tests/check.py c
+
+Batterie de tests de performance (avec generation de courbes):
+> ./tests/performance/perf.py c
+
+
+
+****************************************************************
+**  Langage Python                                            **
+****************************************************************
+
+Utilisez (et modifiez) le script "run.py" fourni.
+(Lire le debut de ce fichier pour une explication de comment lancer les 
+tests.)
